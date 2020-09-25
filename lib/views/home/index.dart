@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ad_banner.dart';
+import 'goods_category.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,6 +13,7 @@ class _HomePageState extends State<HomePage> {
     return ListView(
       children: [
         AdBanner(),
+        GoodsCategory(),
       ],
     );
   }
