@@ -24,16 +24,18 @@ class _HomePageState extends State<HomePage> {
     //     ),
     //   ],
     // );
-    return CustomScrollView(
-      slivers: [
-        SliverSafeArea(sliver: SliverToBoxAdapter(child: AdBanner())),
-        // SliverToBoxAdapter(child: AdBanner()),
-        SliverToBoxAdapter(child: GoodsCategory()),
-        // ProductCategory(),
-        SliverSafeArea(sliver: ProductCategory()),
-        // SliverToBoxAdapter(child: GoodsList()),
-        GoodsList(),
-      ],
+    return SafeArea(
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(child: AdBanner()),
+          // SliverToBoxAdapter(child: AdBanner()),
+          SliverToBoxAdapter(child: GoodsCategory()),
+          ProductCategory(),
+          // SliverSafeArea(sliver: ProductCategory()),
+          // SliverToBoxAdapter(child: GoodsList()),
+          GoodsList(),
+        ],
+      ),
     );
   }
 }
